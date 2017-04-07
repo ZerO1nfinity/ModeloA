@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_picture"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/cardview_height"
+    cardview:cardCornerRadius="@dimen/cardview_corner_radius"
+    android:layout_marginBottom="@dimen/padding_activity"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--Framelayout permite superponer elementos-->
+        <ImageView
+            android:id="@+id/img_pictureCard"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cardview_height"
+            android:background="@drawable/bagon2"
+            android:transitionName="@string/transition_picture"
+            android:scaleType="centerCrop"/><!--La imagen se centra cortando si es muy grande-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="bottom"
+            android:paddingLeft="@dimen/padding_activity"
+            android:paddingBottom="@dimen/padding_activity"
+            android:background="@color/backgroundText_card">
+
+            <TextView
+                android:id="@+id/tv_userNameCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/username_card"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/textSize_username_card"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_firstWord"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="@string/firstWord_card"
+                    android:textSize="@dimen/textSize_time_card"/>
+                <TextView
+                    android:id="@+id/tv_timeCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="@string/timecard_card"
+                    android:textSize="@dimen/textSize_time_card"
+                    android:layout_marginLeft="@dimen/timecard_marginLeft_card"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/like_marginTio_card">
+
+                <CheckBox
+                    android:id="@+id/check_likeCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/checkbox_selecter_favorite"/>
+                <TextView
+                    android:id="@+id/tv_likeNumberCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:text="@string/likeNumberCard_card"
+                    android:textSize="@dimen/textSize_time_card"
+                    android:layout_marginLeft="@dimen/timecard_marginLeft_card"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</android.support.v7.widget.CardView>

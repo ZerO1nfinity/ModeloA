@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Modelo A</string>
+    <string name="hint_username">Nombre de Usuario</string>
+    <string name="hint_password">Contraseña</string>
+    <string name="button_login">Login</string>
+    <string name="dont_have_account">¿No tienes una cuenta?,</string>
+    <string name="create_here">crea una aquí</string>
+    <string name="hint_email">Correo</string>
+    <string name="hint_name">Nombre</string>
+    <string name="hint_user">Usuario</string>
+    <string name="hint_confirm_password">Confirmar contraseña</string>
+    <string name="button_unete">Únete</string>
+    <string name="title_activity_createAccount">Crear cuenta</string>
+    <string name="username_card">Kevin Robin</string>
+    <string name="firstWord_card">Hace</string>
+    <string name="timecard_card">4 días</string>
+    <string name="likeNumberCard_card">10 Me gusta</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bottom_navigation_home">Principal</string>
+    <string name="bottom_navigation_profile">Perfil</string>
+    <string name="bottom_navigation_search">Buscar</string>
+    <string name="secondWord_detail">Me gusta</string>
+    <string name="title_image">\"Lorem Ipsum\"</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tincidunt quam quis molestie laoreet. Ut maximus imperdiet maximus. Morbi vel massa sit amet ligula suscipit auctor. Nulla lectus ante, accumsan ac ornare sit amet, elementum ut mi. Ut venenatis ultrices scelerisque. Donec at purus et tellus fringilla auctor. Duis quis enim dictum, condimentum nulla id, sodales arcu. Etiam eget porta justo, vel dignissim dui. Nulla vel auctor sem. Praesent porta mi justo, eget tempor mauris tempus vel. Pellentesque nec rutrum ligula. In ut ligula finibus nibh faucibus accumsan vitae semper nibh. Sed hendrerit at mauris vel pellentesque. Pellentesque ultricies justo id feugiat efficitur. Donec ut pretium justo, ut maximus risus.</string>
+    <string name="transition_picture">transition_picture</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

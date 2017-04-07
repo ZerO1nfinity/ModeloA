@@ -2,6 +2,7 @@ package com.zero.modeloa;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.support.design.widget.TextInputEditText;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,26 +12,34 @@ import android.widget.Toast;
 import com.zero.modeloa.view.ContainerActivity;
 import com.zero.modeloa.view.CreateAccountActivity;
 
+import butterknife.BindString;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class LoginActivity extends AppCompatActivity {
+    @BindView(R.id.edt_username) TextInputEditText username;
+    @BindView(R.id.edt_password) TextInputEditText password;
+    @BindView(R.id.img_logo) ImageView img_logo;
+    @BindString(R.string.username_card) String STRING_USERNAME;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        ImageView img_login = (ImageView) findViewById(R.id.img_logo);
-        img_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.grupoarcuna.com"));
-                startActivity(intent);
-            }
-        });
+        ButterKnife.bind(this);
 
+        username.setText(STRING_USERNAME);
     }
 
-    public void Login(View view){
+    @OnClick(R.id.img_logo) void goToWeb() {
+        Intent intent = new Intent(Intent.ACTION_VIEW);
+        intent.setData(Uri.parse("http://www.grupoarcuna.com"));
+        startActivity(intent);
+    }
+
+    @OnClick(R.id.btn_login) public void Login(View view){
         Intent intent = new Intent(LoginActivity.this, ContainerActivity.class);
         startActivity(intent);
         //finish();
@@ -41,5 +50,4 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         //finish();
     }
-
 }

@@ -3,6 +3,7 @@ package com.zero.modeloa.adapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.transition.Explode;
@@ -73,6 +74,14 @@ public class PictureAdapterRecyclerView extends RecyclerView.Adapter<PictureAdap
     @Override
     public int getItemCount() {
         return lista.size();
+    }
+
+    public void addAll(@NonNull ArrayList<Picture> pictures){
+        if (pictures == null){
+            throw new NullPointerException("The items cannot be null");
+        }
+        this.lista.addAll(pictures);
+        notifyItemRangeInserted(getItemCount()-1,pictures.size());
     }
 
     public class PictureViewHolder extends RecyclerView.ViewHolder{

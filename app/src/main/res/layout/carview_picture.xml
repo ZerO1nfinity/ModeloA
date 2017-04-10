@@ -6,9 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/cardview_height"
     cardview:cardCornerRadius="@dimen/cardview_corner_radius"
-    android:layout_marginBottom="@dimen/padding_activity"
-    android:layout_marginLeft="5dp"
-    android:layout_marginRight="5dp">
+    >
 
     <FrameLayout
         android:layout_width="match_parent"

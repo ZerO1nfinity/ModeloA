@@ -2,6 +2,7 @@ package com.zero.modeloa.view.fragment;
 
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
@@ -10,8 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.zero.modeloa.R;
+import com.zero.modeloa.adapter.ItemOffsetDecoration;
 import com.zero.modeloa.adapter.PictureAdapterRecyclerView;
 import com.zero.modeloa.model.Picture;
 
@@ -21,6 +24,7 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ProfileFragment extends Fragment {
+    PictureAdapterRecyclerView adapter;
     RecyclerView recycler_lista;
 
     public ProfileFragment() {
@@ -35,13 +39,15 @@ public class ProfileFragment extends Fragment {
 
         recycler_lista = (RecyclerView) view.findViewById(R.id.recycler_lista);
 
+
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
 
         recycler_lista.setLayoutManager(linearLayoutManager);
 
-        PictureAdapterRecyclerView adapter = new PictureAdapterRecyclerView(buildPictures(),R.layout.carview_picture,getActivity());
+        adapter = new PictureAdapterRecyclerView(buildPictures(),R.layout.carview_picture,getActivity());
         recycler_lista.setAdapter(adapter);
+        recycler_lista.addItemDecoration(new ItemOffsetDecoration(getActivity(), R.integer.offset));
 
         return view;
     }
@@ -61,4 +67,6 @@ public class ProfileFragment extends Fragment {
         lista.add(new Picture("https://secure.static.tumblr.com/17efe76922038b70f3211cf639d5b030/mn6o5pi/J7ynai5sm/tumblr_static_tumblr_static_19rddujhuh7o848s8wgwo88w8_640.jpg","Kris Evans","2 días","15 Me gusta"));
         return lista;
     }
+
+
 }

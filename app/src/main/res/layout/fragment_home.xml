@@ -15,9 +15,9 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
-        android:paddingLeft="11dp"
-        android:paddingRight="11dp"
-        android:paddingTop="@dimen/padding_activity">
+        android:paddingTop="8dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp">
         
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_lista"
@@ -30,7 +30,7 @@
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
+        android:id="@+id/fab_home"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/padding_fab"

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.zero.modeloa.R;
+import com.zero.modeloa.adapter.ItemOffsetDecoration;
 import com.zero.modeloa.adapter.PictureAdapterRecyclerView;
 import com.zero.modeloa.model.Picture;
 
@@ -38,6 +39,7 @@ public class SearchFragment extends Fragment {
 
         PictureAdapterRecyclerView adapter = new PictureAdapterRecyclerView(buildPictures(),R.layout.carview_picture,getActivity());
         recycler_busqueda.setAdapter(adapter);
+        recycler_busqueda.addItemDecoration(new ItemOffsetDecoration(getActivity(), R.integer.offset));
 
         return view;
     }

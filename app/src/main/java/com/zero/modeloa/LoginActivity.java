@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.zero.modeloa.service.MyService;
 import com.zero.modeloa.view.ContainerActivity;
 import com.zero.modeloa.view.CreateAccountActivity;
 
@@ -44,6 +45,16 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
         //finish();
     }
+
+    @OnClick(R.id.btn_startService) public void StartService(View view){
+        startService(new Intent(getBaseContext(), MyService.class));
+    }
+
+    @OnClick(R.id.btn_stopService) public void StopService(View view){
+        stopService(new Intent(getBaseContext(), MyService.class));
+    }
+
+
 
     public void goCreateAccount(View view){
         Intent intent = new Intent(LoginActivity.this, CreateAccountActivity.class);

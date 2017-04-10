@@ -33,12 +33,18 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".view.ContainerActivity" />
         </activity>
+
         <service android:name=".service.MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+        <service
+            android:name=".service.MyService"
+            android:enabled="true"
+            android:exported="true" />
 
+        <activity android:name=".view.ConstraintActivity"></activity>
     </application>
 
 </manifest>
